@@ -30,20 +30,23 @@ componentDidMount(){
 }
   render() {
     return (
-      <div className='App container'>
-        {
-          this.state.Mdata.length?
-        this.state.Mdata.map(ele =>{
-        return <FetchData
-            key={ele.id}
-            pic={`https://image.tmdb.org/t/p/w300${ele.poster_path}`}
-            name={ele.title || ele.name}
-            date={ele.release_date || ele.first_air_date}
-            type={ele.media_type} 
-            rating={ele.vote_average}
-            />;
-        }):<CircularProgress />}
-        <CustomPagination setPage={this.setPage} page={this.CurrentPage}/>
+      <div>
+        <h1 style={{position:"sticky"}} className='d-flex justify-content-center' onClick={()=>{window.scroll(0,0)}} >Treanding</h1>
+        <div className='App container'>
+          {
+            this.state.Mdata.length?
+          this.state.Mdata.map(ele =>{
+          return <FetchData
+              key={ele.id}
+              pic={`https://image.tmdb.org/t/p/w300${ele.poster_path}`}
+              name={ele.title || ele.name}
+              date={ele.release_date || ele.first_air_date}
+              type={ele.media_type}
+              rating={ele.vote_average}
+              />;
+          }):<CircularProgress />}
+          <CustomPagination setPage={this.setPage} page={this.CurrentPage}/>
+        </div>
       </div>
     )
   }

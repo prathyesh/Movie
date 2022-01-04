@@ -8,7 +8,7 @@ export class FetchData extends Component {
     }
     render() {
         return (
-            <div className="Mcard m-2">
+            <div className="Mcard m-3">
             <div className="image mb-1 "><img src={this.props.pic} alt="" width="100%" /></div>
             <div className="name p-1 mb-2">{this.props.name}</div>
             <div className="rating m-2 p-1">
