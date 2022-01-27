@@ -1,0 +1,84 @@
+.Movie-Container {
+	background: lightgoldenrodyellow;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+    gap: .5rem;
+}
+.Movie-Container > * {
+	flex: 1;
+}
+
+.Movie-Heading {
+	padding-left: 1rem;
+}
+
+.Hbar {
+	transform: scale(1.2);
+}
+.Bar-Btn {
+	display: none;
+}
+
+.Movie-Pages {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Movie-Pages p {
+	padding: 0 1rem;
+}
+.Movie-Pages>div :hover{
+	cursor: pointer;
+	transform: scale(1.2);
+	transition: transform 500ms ease-in-out;
+}
+.Movie-Search-op {
+	align-self: center;
+	display: flex;
+	justify-content: flex-end;
+}
+.For-Pushing-Right {
+	padding-right: 1rem;
+}
+
+.Submit-St {
+	margin-right:.3rem;
+	padding: .4rem 1rem;
+	border-radius: .4rem;
+}
+.Btn-Custome {
+	display: inline-block;
+	border: 1px solid;
+	padding: .4rem .6rem;
+	border-radius: .4rem;
+}
+
+@media (max-width: 991.5px) {
+	.Movie-Container {
+		flex-direction: column;
+        justify-items:flex-start;
+	}
+	.Bar-Btn {
+		padding-right: 1rem;
+		display: block;
+		align-self: center;
+	}
+	.Bar-Btn:hover{
+		transform:scale(1.2);
+		transition: transform 500ms ease-in-out;
+	}
+	.Movie-Heading {
+		display: flex;
+		justify-content: space-between;
+	}
+    .Movie-Pages{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .Movie-Search-op{
+        padding: .5rem;
+        align-self: flex-start;
+    }
+}

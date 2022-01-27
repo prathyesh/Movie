@@ -1,0 +1,62 @@
+.NavMain {
+	margin: 0 auto;
+	padding: 0 0 0 1rem;
+	background: hsl(60, 90%, 80%);
+	width: 90%;
+}
+.submit-st{
+	width:250px;
+	padding: .4rem 1rem;
+	border-radius: .4rem;
+}
+.Hburg{
+	border: 0ch;
+	float:right;
+	padding: .5rem;
+	transform: scaleX(1.5);
+	display: none;
+	transition: transform 500ms ease-in-out;
+}
+.Hburg:hover{
+	transform: scale(1.2);
+}
+.btn-cus{
+	display: inline-block;
+	border: 1px solid;
+	padding: .4rem .6rem;
+	border-radius: .4rem;
+}
+.NavItems {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	font-size: 1.2rem;
+	align-items: center;
+}
+.NavItems > p {
+	cursor: pointer;
+	padding: 0 1rem;
+	margin: 0 1rem;
+}
+p:hover {
+    transition: transform 500ms ease-in-out;
+	transform: scaleY(1.2);
+}
+@media (max-width: 991.5px) {
+	.NavMain{
+		padding: 1rem;
+	}
+	.Hburg{
+		display: block;
+	}
+	.NavItems {
+        background-color:hsl(60, 90%, 90%);
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	.NavItems > p {
+		margin: .5rem 1rem 0;
+        font-size: medium;
+	}
+}
