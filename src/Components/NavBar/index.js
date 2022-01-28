@@ -21,7 +21,7 @@ export class NavBar extends Component {
 	HandleChange=(e)=>{
 		this.Search=e.target.value;
 		if(this.Search.length){
-		this.Fetch_Search();
+		this.props.SearchCon(this.Search);
 		}
 	}
 	HandleSearch=()=>{
@@ -34,11 +34,13 @@ export class NavBar extends Component {
 	HandleToggle=()=>{
 		this.setState({toggle:this.state.toggle?false:true});
 	}
-	async Fetch_Search(){
-		const req=await fetch(`https://api.themoviedb.org/3/search/company?api_key=b341f65f7831bca4d2c7dae31d4194db&query=${this.Search}`);
-		const res=await req.json();
-		this.setState({SearchData:res.results});
-	}
+
+	// async Fetch_Search(){
+	// 	const req=await fetch(`https://api.themoviedb.org/3/search/company?api_key=b341f65f7831bca4d2c7dae31d4194db&query=${this.Search}`);
+	// 	const res=await req.json();
+	// 	this.setState({SearchData:res.results});
+	// }
+
 	render() {
 		const IsToggled=this.state.toggle;
 		const Width=this.state.windowWidth;
